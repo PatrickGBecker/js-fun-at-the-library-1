@@ -19,15 +19,20 @@ function listTitles(shelf) {
 }
 
 function searchShelf(shelf, title) {
+  var hasBook = false;
   for (var i = 0; i < shelf.length; i++) {
-    console.log(shelf[i].title)
-    if (shelf[i].title !== title) {
-      return false;
-    } else {
-      return truegit add shelf;
-    }
-    }
+    if(shelf[i].title === title) {
+      hasBook = true;
+      } else
+      hasBook = false
+      }
+      return hasBook
   }
-//for loop
-//conditional statement
-//console log parameters
+
+
+module.exports = {
+  shelfBook,
+  unshelfBook,
+  listTitles,
+  searchShelf,
+};
